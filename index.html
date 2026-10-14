@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Felicidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dancing+Script:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio src="musica/Drum Roll (Ending Celebration) - Sound Effect _ ProSounds.mp3" autoplay></audio>
+    <div id="lyrics">
+  <!-- Degradados de las flores (no se ven) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="gRosaA" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#ff8fb5"/><stop offset="1" stop-color="#c2185b"/></radialGradient>
+      <radialGradient id="gRosaB" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#ff6f9f"/><stop offset="1" stop-color="#a8124f"/></radialGradient>
+      <radialGradient id="gRosaC" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#e83c78"/><stop offset="1" stop-color="#8f0f44"/></radialGradient>
+      <radialGradient id="gGard" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#fbf6ee"/><stop offset="1" stop-color="#e9dcc9"/></radialGradient>
+    </defs>
+  </svg>
+
+  <!-- Fondo animado -->
+  <div class="fondo" aria-hidden="true">
+    <span class="orbe o1"></span>
+    <span class="orbe o2"></span>
+    <span class="orbe o3"></span>
+  </div>
+  <div class="estrellas" id="estrellas" aria-hidden="true"></div>
+  <div class="flores" id="flores" aria-hidden="true"></div>
+
+  <!-- Pantalla principal -->
+  <main class="escena">
+    <header class="titulo" id="titulo">
+      <h1>Felicidades</h1>
+      <p>esto te lo hago con todo mi amor <span class="latido">♥</span></p>
+    </header>
+
+    <div class="regalo" id="regalo" role="button" tabindex="0" aria-label="Abrir el regalo">
+      <div class="sombra"></div>
+      <div class="caja">
+        <div class="cuerpo"></div>
+        <div class="luz"></div>
+        <div class="haz"></div>
+        <i class="chispa" style="--dx:-7em; --fs:1.7em; --dl:0s">✦</i>
+        <i class="chispa" style="--dx:-3em; --fs:1.1em; --dl:.25s">✧</i>
+        <i class="chispa" style="--dx:0em;  --fs:2em;   --dl:.5s">✦</i>
+        <i class="chispa" style="--dx:3.5em; --fs:1.2em; --dl:.75s">✧</i>
+        <i class="chispa" style="--dx:7em;  --fs:1.6em; --dl:1s">✦</i>
+        <i class="chispa" style="--dx:-5em; --fs:1em;   --dl:1.2s">♥</i>
+        <i class="chispa" style="--dx:5em;  --fs:1em;   --dl:.4s">♥</i>
+        <div class="tapa">
+          <div class="lazo">
+            <span class="cola izq"></span>
+            <span class="cola der"></span>
+            <span class="rizo izq"></span>
+            <span class="rizo der"></span>
+            <span class="nudo"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="pista" id="pista">Toca el regalo ✿</p>
+  </main>
+
+  <!-- Pantallita estilo Kwai: elige una opción -->
+  <div class="opciones-wrap" id="opciones" aria-hidden="true">
+    <div class="pantalla" role="dialog" aria-label="Elige una opción">
+      <div class="pantalla-marco">
+        <div class="pantalla-vidrio">
+          <span class="o-int a"></span>
+          <span class="o-int b"></span>
+          <span class="corazon-int c1">♥</span>
+          <span class="corazon-int c2">♥</span>
+          <span class="corazon-int c3">✿</span>
+          <span class="corazon-int c4">♥</span>
+
+          <span class="notch"></span>
+          <button class="atras" id="atras" type="button" aria-label="Volver a la pantalla principal">‹</button>
+
+          <h2>Elige una opción</h2>
+
+          <nav class="opciones">
+            <a class="opcion o-carta" href="carta/index.html">
+              <span class="ico">💌</span><span class="txt">Carta</span>
+            </a>
+            <a class="opcion o-libro" href="libro/index.html">
+              <span class="ico">📖</span><span class="txt">Libro</span>
+            </a>
+            <a class="opcion o-ramo" href="proyecto-flores/index.html">
+              <span class="ico">💐</span><span class="txt">Ramo</span>
+            </a>
+          </nav>
+
+          <p class="pie-kwai">con todo mi amor ♥</p>
+          <span class="progreso"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Música de fondo: sin controles y en bucle (musica/cancion.mp3) -->
+  <script src="musica/Drum Roll (Ending Celebration) - Sound Effect _ ProSounds.mp3"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

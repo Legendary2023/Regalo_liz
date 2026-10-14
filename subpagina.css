@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #6b1f5c;
+  background: linear-gradient(135deg, #f7799f, #d86fc8, #9a74e0, #f58fb0, #ffa27f, #f7799f);
+  background-size: 400% 400%;
+  animation: fondo 22s ease-in-out infinite;
+}
+
+@keyframes fondo {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+.tarjeta {
+  width: min(92vw, 34rem);
+  padding: 2.6rem 2rem;
+  text-align: center;
+  border-radius: 2rem;
+  background: rgba(255, 247, 250, .93);
+  box-shadow: 0 0 3rem rgba(255, 150, 205, .65), 0 1.5rem 3rem rgba(60, 0, 50, .35);
+}
+
+.tarjeta h1 {
+  margin: 0 0 .6rem;
+  font: 400 clamp(3rem, 11vw, 4.8rem) / 1.1 "Great Vibes", "Brush Script MT", cursive;
+  color: #c2185b;
+}
+
+.tarjeta p {
+  margin: 0;
+  font: 700 1.7rem / 1.3 "Dancing Script", "Segoe Script", cursive;
+}
+
+.volver {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: .55rem 1.1rem;
+  font: 700 1.2rem "Dancing Script", "Segoe Script", cursive;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6f9f, #b07cff);
+  box-shadow: 0 6px 14px rgba(190, 60, 140, .45), inset 0 1px 0 rgba(255, 255, 255, .5);
+  transition: transform .3s cubic-bezier(.3, 1.6, .5, 1), box-shadow .3s;
+}
+.volver:hover { transform: translateY(-2px) scale(1.06); box-shadow: 0 10px 20px rgba(190, 60, 140, .55); }
+.volver:active { transform: scale(.94); }
